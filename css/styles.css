@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Grid for the overall page layout */
 body {
     display: grid;
@@ -151,7 +147,7 @@ img {
     z-index: 1;
 }
 
-.hero-content a {
+.primary-button {
     display: inline-block;
     background-color: #EBCB70;
     color: #030303;
@@ -164,7 +160,7 @@ img {
     margin-top: 16px;
 }
 
-.hero-section a:hover, .hero-section a:focus {
+.primary-button:hover, .primary-button:focus {
   color: #1D4D0E;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -238,7 +234,7 @@ img {
     margin-bottom: 12px;
 }
 
-.flower-card a {
+.onpage-links {
     display: block;
     text-align: center;
     font-size: 22px;
@@ -247,25 +243,13 @@ img {
     text-decoration: none;
 }
 
-.flower-card a:hover, .flower-card a:focus {
+.onpage-links:hover, .onpage-links:focus {
   color: #1D4D0E;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-.rose-image {
-    max-width: 100%;
-}
-
-.daisy-image {
-    max-width: 100%;
-}
-
-.lily-image {
-    max-width: 100%;
-}
-
-.peony-image {
+.rose-image, .daisy-image, .lily-image, .peony-image {
     max-width: 100%;
 }
 
@@ -294,23 +278,6 @@ img {
 
 #highlights {
     text-align: center;
-}
-
-.book-consultation {
-    display: inline-block;
-    background-color: #EBCB70;
-    color: #030303;
-    font-size: 22px;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-}
-
-.book-consultation:hover, .book-consultation:focus {
-  color: #1D4D0E;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .client-testimonial {
@@ -384,19 +351,6 @@ footer {
     padding: 12px;
 }
 
-.footer-column button {
-    background-color: #F2C94C;
-    color: #030303;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: "Heebo", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-
 .footer-column:not(:last-child) {
     border-right: 1px solid #F7F3ED;
 }
@@ -451,21 +405,6 @@ footer a:hover, footer a:focus {
     line-height: 30px;
 }
 
-/*Contact Us page*/
-.contact-section {
-    max-width: 1000px;
-    margin: 40px;
-    padding: 20px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #030303;
-}
-
 /*Collections page*/
 
 .collections-title {
@@ -497,38 +436,11 @@ th, td {
     margin-bottom: 12px;
 }
 
-.arrangement-card a {
-    display: block;
-    text-align: center;
-    font-size: 22px;
-    line-height: 30px;
-    color: #030303;
-    text-decoration: none;
-}
-
-.arrangement-card a:hover, .arrangement-card a:focus {
-  color: #1D4D0E;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 #arrangements {
     padding-bottom: 50px;
 }
 
-.bouquet-image {
-    max-width: 100%;
-}
-
-.aisle-image {
-    max-width: 100%;
-}
-
-.arch-image {
-    max-width: 100%;
-}
-
-.centerpiece-image {
+.bouquet-image, .aisle-image, .arch-image, .centerpiece-image {
     max-width: 100%;
 }
 
@@ -575,24 +487,6 @@ th, td {
     padding-bottom: 80px;
 }
 
-.indoor a,
-.outdoor a {
-    display:block;
-    text-align: center;
-    font-size: 22px;
-    line-height: 30px;
-    color: #030303;
-    text-decoration: none;
-}
-
-.indoor a:hover, .outdoor a:hover, .indoor a:focus, .outdoor a:focus {
-    color: #1D4D0E;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-
-
 /*About page*/
 .about-title {
     text-align: center;
@@ -621,3 +515,56 @@ th, td {
     padding-right: 20px;
 }
 
+/*Contact page*/
+.contact-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 36px;
+    padding-left: 20px;
+} 
+
+.contact-description {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input, select, textarea, button, table {
+    font-family: "Heebo", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 12px;
+    border: 1px solid #030303;
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width:auto;
+}
+
+th, td {
+    border: 1px solid #030303;
+    text-align: center;
+    padding: 2px;
+}

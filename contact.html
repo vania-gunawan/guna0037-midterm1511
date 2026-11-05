@@ -28,54 +28,58 @@
     <main id="main">
         <section class="contact-section">
             <h1 class="contact-title">Contact Us</h1>
-                <p>Have a question? We'd love to hear from you!</p>
-                <form method="post">
-            <div>
-                <label for="full-name">Full name</label>
-                <input type="text" id="full-name" name="name" autocomplete="name" required>
-            </div>
+                <p class="contact-description">Have a question? We'd love to hear from you!</p>
+                
 
-            <div>
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+        <div class="contact-grid">
+            <form method="post">
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="name" autocomplete="name" required>
+                </div>
 
-            <div>
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
-            </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div>
-            <label for="inquiries">Subject</label>
-            <select name="inquiries" id="inquiries">
-                <option value="general">General</option>
-                <option value="or">Order</option>
-                <option value="cm">Custom Order</option>
-                <option value="ot">Other</option>
-            </select>
-            </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                </div>
 
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="inquiries">Subject</label>
+                
+                    <select name="inquiries" id="inquiries">
+                        <option value="general">General</option>
+                        <option value="or">Order</option>
+                        <option value="cm">Custom Order</option>
+                        <option value="ot">Other</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
 
-            <div>
-                <fieldset>
-                    <legend>Preferred contact method</legend>
-                    <input type="radio" id="by-email" name="contact" value="email">
-                    <label for="by-email">Email</label>
-                    <input type="radio" id="by-phone" name="contact" value="phone">
-                    <label for="by-phone">Phone</label>
-                </fieldset>
-            </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Preferred contact method</legend>
+                        <input type="radio" id="by-email" name="contact" value="email">
+                        <label for="by-email">Email</label>
+                        <input type="radio" id="by-phone" name="contact" value="phone">
+                        <label for="by-phone">Phone</label>
+                    </fieldset>
+                </div>
             
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-                </form>
+                <div>
+                    <button class="primary-button" type="submit">Submit</button>
+                </div>
+            
+            </form>
 
-                <hr>
                 <table>
                     <caption>Store hours</caption>
                     <thead>
@@ -108,12 +112,9 @@
                             </tr>
                         </tfoot>
                 </table>
+            </div>
         </section>
     </main>
-
-
-
-
 
 
 
@@ -162,7 +163,7 @@
             <form>
                 <label for="email">Email address</label>
                 <input type="email" id="email" name="email" autocomplete="email" required>
-                <button type="submit">Sign up</button>
+                <button class="primary-button" type="submit">Sign up</button>
             </form>
         </div>
 
