@@ -77,10 +77,11 @@ img {
     top: 10px;
 }
 
-.logo {
+.logo a {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
 .logo img {
@@ -209,20 +210,6 @@ img {
     text-decoration: none;
 }
 
-.collections-cta {
-    grid-column: 1 / span 2;
-    justify-self: center;
-    background-color: #EBCB70;
-    color: #030303;
-    padding: 12px 24px;
-    border: 1px solid #030303;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: 32px;
-}
-
 .flower-card {
     min-width: 0;
 }
@@ -247,10 +234,6 @@ img {
   color: #1D4D0E;
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-.rose-image, .daisy-image, .lily-image, .peony-image {
-    max-width: 100%;
 }
 
 .wedding-highlights-section {
@@ -389,7 +372,7 @@ footer a:hover, footer a:focus {
     gap: 60px;
 }
 
-.footer-nav h3 {
+.footer-nav h2 {
     font-size: 22px;
     line-height: 30px;
     margin: 0;
@@ -438,10 +421,6 @@ footer a:hover, footer a:focus {
 
 #arrangements {
     padding-bottom: 50px;
-}
-
-.bouquet-image, .aisle-image, .arch-image, .centerpiece-image {
-    max-width: 100%;
 }
 
 /*Projects page*/
@@ -549,7 +528,7 @@ footer a:hover, footer a:focus {
     gap: 8px;
 }
 
-input, select, textarea, button, table {
+input, select, textarea, button {
     font-family: "Heebo", sans-serif;
     font-size: 18px;
     line-height: 28px;
