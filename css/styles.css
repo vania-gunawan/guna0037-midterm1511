@@ -33,7 +33,7 @@ h1, h2, h3 {
     font-family: "Sora", sans-serif;
 }
 
-h1 {
+.main-page {
     font-size: 56px;
     line-height: 70px;
     font-weight: 700;
@@ -74,7 +74,7 @@ img {
     top: -100px;
     left: 10px;
     background-color: white;
-    color: #8F2840;
+    color: #1D4D0E;
 }
 
 .skip-link:focus {
@@ -105,8 +105,9 @@ img {
 }
 
 .nav a:hover, .nav a:focus {
-  color: #8F2840;
+  color: #1D4D0E;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .hero-section {
@@ -129,7 +130,7 @@ img {
     height: 567px;
     padding: 40px;
     margin-right: 60px;
-    background-color: #F7F3ED;
+    background-color: rgb(247 243 237 / 85%);
     text-align: center;
     align-self: center;
     justify-self: end;
@@ -138,7 +139,7 @@ img {
 
 .hero-content a {
     display: inline-block;
-    background-color: #F2C94C;
+    background-color: #EBCB70;
     color: #030303;
     padding: 12px 24px;
     border: 1px solid #030303;
@@ -150,8 +151,9 @@ img {
 }
 
 .hero-section a:hover, .hero-section a:focus {
-  color: #8F2840;
+  color: #1D4D0E;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .collection-section {
@@ -200,7 +202,7 @@ img {
 .collections-cta {
     grid-column: 1 / span 2;
     justify-self: center;
-    background-color: #F2C94C;
+    background-color: #EBCB70;
     color: #030303;
     padding: 12px 24px;
     border: 1px solid #030303;
@@ -232,8 +234,9 @@ img {
 }
 
 .flower-card a:hover, .flower-card a:focus {
-  color: #8F2840;
+  color: #1D4D0E;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .rose-image {
@@ -253,7 +256,7 @@ img {
 }
 
 .wedding-highlights-section {
-    background-color: #8F2840;
+    background-color: #1D4D0E;
     color: #F7F3ED;
     text-align: center;
     padding: 40px 0;
@@ -281,7 +284,7 @@ img {
 
 .book-consultation {
     display: inline-block;
-    background-color: #F2C94C;
+    background-color: #EBCB70;
     color: #030303;
     font-size: 22px;
     font-weight: 700;
@@ -291,8 +294,9 @@ img {
 }
 
 .book-consultation:hover, .book-consultation:focus {
-  color: #8F2840;
+  color: #1D4D0E;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .client-testimonial {
@@ -402,8 +406,9 @@ footer {
 }
 
 footer a:hover, footer a:focus {
-    color: #8F2840;
+    color: #1D4D0E;
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .footer-logo {
@@ -444,11 +449,80 @@ table {
 }
 
 th, td {
-    border: 1px solid black;
+    border: 1px solid #030303;
 }
 
+/*Collections page*/
+
+.collections-title {
+    text-align: center;
+    font-size: 36px;
+    padding-left: 20px;
+}
+
+.collections-description {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+#flowers,
+#arrangements {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.arrangement-card {
+    min-width: 0;
+}
+
+.arrangement-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.arrangement-card a {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    color: #030303;
+    text-decoration: none;
+}
+
+.arrangement-card a:hover, .arrangement-card a:focus {
+  color: #1D4D0E;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#arrangements {
+    padding-bottom: 50px;
+}
+
+.bouquet-image {
+    max-width: 100%;
+}
+
+.aisle-image {
+    max-width: 100%;
+}
+
+.arch-image {
+    max-width: 100%;
+}
+
+.centerpiece-image {
+    max-width: 100%;
+}
 
 /*Projects page*/
+
+.projects-title {
+    text-align: center;
+}
 
 /*About page*/
 
