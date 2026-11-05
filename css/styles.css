@@ -81,11 +81,25 @@ img {
     top: 10px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .logo img {
     max-width: 180px;
     max-height: 65px;
     width: auto;
     height: auto;
+}
+
+.logo-text {
+    font-family: "Sora", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #1D4D0E;
 }
 
 /* Flexbox to align nav links horizontally */
@@ -522,7 +536,76 @@ th, td {
 
 .projects-title {
     text-align: center;
+    font-size: 36px;
+    padding-left: 20px;
 }
 
+.indoor,
+.outdoor {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.projects-description {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.indoor-image,
+.outdoor-image {
+    max-width: 800px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display:block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+
+.outdoor {
+    padding-bottom: 80px;
+}
+
+.indoor a,
+.outdoor a {
+    display:block;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    color: #030303;
+    text-decoration: none;
+}
+
+.indoor a:hover, .outdoor a:hover, .indoor a:focus, .outdoor a:focus {
+    color: #1D4D0E;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+
 /*About page*/
+.about-title {
+    text-align: center;
+    font-size: 36px;
+    padding-left: 20px;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+
 
