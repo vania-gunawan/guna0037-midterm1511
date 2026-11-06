@@ -9,6 +9,8 @@ body {
     display: grid;
     margin: 0;
     font-family: "Heebo", sans-serif;
+    font-size: 1rem;
+    line-height: 1.875rem;
     color: #030303;
     background-color: #F7F3ED;
     grid-template-areas:
@@ -30,30 +32,31 @@ h1, h2, h3 {
 }
 
 .main-page {
-    font-size: 56px;
-    line-height: 70px;
+    font-size: 3.5rem;
+    line-height: 4.375rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 45px;
+    font-size: 2rem;
+    line-height: 2.8125rem;
     font-weight: 700;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     font-weight: 600;
 }
 
 p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
 }
 
 img {
     max-width: 100%;
+    height:auto;
     display: block;
 }
 
@@ -93,23 +96,32 @@ img {
 
 .logo-text {
     font-family: "Sora", sans-serif;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     font-weight: 600;
     color: #1D4D0E;
 }
 
 /* Flexbox to align nav links horizontally */
 .nav {
-    display:flex;
-    align-items: center;
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Nav Desktop*/
+@media (min-width: 900px) {
+    .nav {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
 }
 
 .nav a {
     font-family: "Heebo", sans-serif;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     font-weight: 500;
     color: #030303;
     text-decoration: none;
@@ -123,14 +135,40 @@ img {
 
 .hero-section {
     display: grid;
-    grid-template-areas: "hero";
+    grid-template-areas: 
+        "image"
+        "content";
     max-width: 1290px;
     margin: 0 auto;
 }
 
 .hero-image {
-    grid-area: hero;
+    grid-area: image;
     width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-content {
+    grid-area: content;
+    width: 100%;
+    height: auto;
+    padding: 32px 20px;
+    margin-right: 0;
+    background-color: rgb(247 243 237 / 85%);
+    text-align: center;
+    align-self: center;
+    justify-self:center;
+}
+
+/*Hero-Desktop*/
+@media (min-width: 900px) {
+    .hero-section {
+        grid-template-areas: "hero";
+    }  
+
+.hero-image {
+    grid-area: hero;
     height: 745px;
     object-fit: cover;
 }
@@ -140,12 +178,13 @@ img {
     width: 491px;
     height: 567px;
     padding: 40px;
-    margin-right: 60px;
     background-color: rgb(247 243 237 / 85%);
+    margin-right: 60px;
     text-align: center;
     align-self: center;
-    justify-self: end;
+    justify-self: right;
     z-index: 1;
+}
 }
 
 .primary-button {
@@ -156,7 +195,7 @@ img {
     border: 1px solid #030303;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     margin-top: 16px;
 }
@@ -169,15 +208,22 @@ img {
 
 .collection-section {
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     max-width: 1278px;
     width: 100%;
     margin: 0 auto;
-    padding: 48px 0 60px;
+    padding: 48px 20px 60px;
+}
+
+@media (min-width: 900px) {
+    .collection-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 48px 0 60px;
+    }
 }
 
 #collections {
-    grid-column: 1 / span 2;
+    grid-column: 1;
 }
 
 .collection-section h2 {
@@ -187,20 +233,33 @@ img {
 /* Grid to arrange flower cards into columns */
 .collections-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-column: 1 / span 2;
+    grid-template-columns: 1fr;
+    grid-column: 1;
     gap: 40px 70px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+@media (min-width: 900px) {
+    .collections-grid {
+        grid-column: 1 / span 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .collection-buttons {
-    grid-column: 1 / span 2;
+    grid-column: 1;
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-bottom: 32px;
+}
+
+@media (min-width:900px) {
+    .collection-buttons {
+        grid-column: 1 / span 2;
+    }
 }
 
 .collection-buttons a {
@@ -208,6 +267,19 @@ img {
     color: #F7F3ED;
     padding: 12px 32px;
     text-decoration: none;
+}
+
+.collections-cta {
+    grid-column: 1;
+    justify-self: center;
+    text-align: center;
+    margin-top: 32px;
+}
+
+@media (min-width: 900px) {
+    .collection-cta {
+        grid-column: 1 / span 2;
+    }
 }
 
 .flower-card {
@@ -224,8 +296,8 @@ img {
 .onpage-links {
     display: block;
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     color: #030303;
     text-decoration: none;
 }
@@ -264,8 +336,14 @@ img {
 }
 
 .client-testimonial {
-    padding: 80px 60px;
+    padding: 40px 2cm;
     background-color: #F7F3ED;
+}
+
+@media (min-width: 900px) {
+    .client-testimonial {
+        padding: 80px 60px;
+    }
 }
 
 .client-testimonial h2 {
@@ -275,9 +353,19 @@ img {
 
 .testimonial-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 30px;
+}
+
+@media (min-width: 900px) {
+    .testimonial-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
 }
 
 .testimonial-image {
@@ -357,7 +445,7 @@ footer {
 }
 
 footer a:hover, footer a:focus {
-    color: #1D4D0E;
+    color: #ebcb70;
     text-decoration: underline;
     text-underline-offset: 4px;
 }
@@ -373,33 +461,33 @@ footer a:hover, footer a:focus {
 }
 
 .footer-nav h2 {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     margin: 0;
 }
 
 .footer-nav a {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
 }
 
 .footer-column address {
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
 }
 
 /*Collections page*/
 
 .collections-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     padding-left: 20px;
 }
 
 .collections-description {
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     padding-left: 20px;
 }
 #flowers,
@@ -427,7 +515,7 @@ footer a:hover, footer a:focus {
 
 .projects-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     padding-left: 20px;
 }
 
@@ -440,8 +528,8 @@ footer a:hover, footer a:focus {
 
 .projects-description {
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     padding-left: 20px;
 }
 
@@ -469,14 +557,14 @@ footer a:hover, footer a:focus {
 /*About page*/
 .about-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     padding-left: 20px;
 }
 
 .about-description {
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     padding-left: 20px;
 }
 
@@ -503,14 +591,14 @@ footer a:hover, footer a:focus {
 
 .contact-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     padding-left: 20px;
 } 
 
 .contact-description {
     text-align: center;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
     padding-left: 20px;
 }
 
@@ -530,8 +618,8 @@ footer a:hover, footer a:focus {
 
 input, select, textarea, button {
     font-family: "Heebo", sans-serif;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
     padding: 12px;
     border: 1px solid #030303;
     border-radius: 8px;
