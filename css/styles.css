@@ -277,7 +277,7 @@ img {
 }
 
 @media (min-width: 900px) {
-    .collection-cta {
+    .collections-cta {
         grid-column: 1 / span 2;
     }
 }
@@ -393,23 +393,45 @@ img {
     background-color: #F2C94C;
 }
 
-/* Flexbox to align the footer columns */
+/* Footer Mobile*/
 footer {
     grid-area: footer;
     background-color: #030303;
     color: #F7F3ED;
-    padding: 60px;
+    padding: 30px 20px;
 }
 
 .footer-row {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 30px;
+    flex-direction: column;
 }
 
 .footer-column {
-    flex: 1 1 200px;
+    flex: 1 1 auto;
+}
+
+/*Footer Desktop*/
+@media (min-width: 900px) {
+    footer {
+        padding: 60px;
+    }
+
+    .footer-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer-column {
+        flex: 1 1 200px;
+    }
+
+    .footer-column:not(:last-child) {
+    border-right: 1px solid #F7F3ED;
+    }
 }
 
 .footer-column form {
@@ -420,10 +442,6 @@ footer {
 
 .footer-column input {
     padding: 12px;
-}
-
-.footer-column:not(:last-child) {
-    border-right: 1px solid #F7F3ED;
 }
 
 .footer-nav {
@@ -604,11 +622,18 @@ footer a:hover, footer a:focus {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
+
+/*Contact Desktop*/
+@media (min-width: 900px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}   
 
 .form-group {
     display: flex;
