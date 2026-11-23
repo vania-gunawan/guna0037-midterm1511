@@ -497,14 +497,7 @@ footer {
     gap: 12px;
 }
 
-.socialmedia {
-    display: flex;
-    gap: 20px;
-    margin-top: 32px;
-}
-
-.footer-nav a,
-.socialmedia a {
+.footer-nav a {
     color: #F7F3ED;
     text-decoration: none;
 }
